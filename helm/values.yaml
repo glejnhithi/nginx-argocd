@@ -1,4 +1,14 @@
-namespace: sandbox
+deployment:
+  name: nginx-deployment
+  image:
+    name: nginx
+    version: latest
 
 service:
-  port: 30002
+  name: nginx
+  type: ClusterIP
+  port: 80
+
+ingress:
+  name: nginx
+  path: /nginx
