@@ -1,0 +1,14 @@
+deployment:
+  name: nginx-deployment-prod
+  image:
+    name: nginx
+    version: latest
+
+service:
+  name: nginx-prod
+  type: ClusterIP
+  port: 80
+
+ingress:
+  name: nginx-prod
+  path: /ngin-prod
